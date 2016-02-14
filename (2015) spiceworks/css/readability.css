@@ -1,0 +1,20 @@
+/* readability CSS for the readme */
+body {
+	color: #444;
+	line-height: 1.4em;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+h1, h2, h3 {
+	line-height: 1.2em;
+}
+
+li {
+	margin: 16px 0; 
+}
+
+.readme-container {
+	width: 60%;
+	margin: 0 auto;
+}

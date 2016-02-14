@@ -1,0 +1,438 @@
+/*	Style.css
+*	Author: Bradley Stafford
+*	
+*	This is the primary stylesheet for the mockup, 
+*	It contains a CSS reset, then the styling for all the page
+*	followed by some conditional styling for responsive design
+*
+*	The CSS will change based on the width of the browser viewing it. 
+*/
+
+/* Embedded font for custom icons as fonts */
+@font-face
+{
+	font-family:fontello;
+	src:url(fontello/font/fontello.ttf), url(fontello/font/fontello.eot);
+}
+
+/* *** CSS RESET ***  */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,
+em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,
+center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,
+thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,
+header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+{
+	border:0;
+	font-size:100%;
+	font-family:Arimo;
+	vertical-align:baseline;
+	margin:0;
+	padding:0;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{
+	display:block;
+}
+
+body
+{
+	line-height:1;
+	width:1040px;
+	background:rgba(83,149,202,0.5);
+	margin:50px auto;
+}
+
+ol,ul
+{
+	list-style:none;
+}
+
+blockquote,q
+{
+	quotes:none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after
+{
+	content:none;
+}
+
+table
+{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+
+/* *** BEGINNING OF DOCUMENT STYLING ***  */
+header.header
+{
+	border:1px solid;
+	background:#FFF;
+	padding:15px;
+}
+
+	header > img
+	{
+		display:inline-block;
+		width:50%;
+		position:relative;
+		top:2px;
+	}
+
+	header > span
+	{
+		display:inline-block;
+		float:right;
+		font-size:20pt;
+		padding:25px 20px 0 0;
+	}
+
+section.content
+{
+	border-right:1px solid #000;
+	border-left:1px solid #000;
+	background:#FFF;
+	overflow:hidden;
+	padding:20px;
+}
+
+section.tabledata
+{
+	display:inline-block;
+	margin:0 0 5px;
+}
+
+/* Show/hide button */
+section.tabledata > a.show,section.tabledata > a.hide
+{
+	border-radius:5px;
+	color:#000;
+	display:inline-block;
+	height:16px;
+	margin:0 0 5px;
+	padding:4px;
+	text-decoration:none;
+}
+
+	a.show
+	{
+		background:#81bae3;
+	}
+
+	a.show:before
+	{
+		font-family:fontello;
+		content:'\e803   Hide Table';
+	}
+
+	a.hide:before
+	{
+		font-family:fontello;
+		content:'\e802  Show Table';
+	}
+
+/* Search bar */	
+section.tabledata input
+{
+	float:right;
+}
+
+	section.tabledata a#searchanchor
+	{
+		text-decoration:none;
+		color:#000;
+		float:right;
+		cursor:auto;
+		padding:5px 2px 2px;
+	}
+
+	section.tabledata a#searchanchor:before
+	{
+		font-family:fontello;
+		content:'\e800';
+	}
+
+/* Data Table */
+section.tabledata table
+{
+	
+	border:1px solid #000;
+	margin:0 auto;
+	width:455px;
+}
+
+	section.tabledata th
+	{
+		text-align:left;
+		border:1px solid;
+	}
+
+	section.tabledata th a
+	{
+		display:block;
+		text-decoration:none;
+		color:#000;
+		padding:5px;
+	}
+	
+		section.tabledata th a:hover,a.hide
+		{
+			background:#fa6e13;
+		}
+
+
+	section.tabledata th span{
+		font-size: 10px;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+	section.tabledata tr > td
+	{
+		padding:2px;
+	}
+
+	section.tabledata tr:nth-child(odd)
+	{
+		background:#FFF;
+	}
+
+	section.tabledata tr:nth-child(even)
+	{
+		background:rgba(250,110,19,0.8);
+	}
+
+	section.tabledata tr > td:nth-child(3)
+	{
+		text-align:right;
+	}
+
+
+/* Right side content */
+section.pictureandtext
+{
+	width:510px;
+	display:inline-block;
+	float:right;
+	padding:10px;
+}
+
+	section.pictureandtext img
+	{
+		width:212px;
+		height:149px;
+		display:inline-block;
+		float:left;
+		border:1px solid orange;
+		text-align:justify;
+		margin:5px 5px -5px 0;
+		padding:5px;
+	}
+
+	section.pictureandtext p
+	{
+		text-align:justify;
+	}
+
+	section.pictureandtext a
+	{
+		text-decoration:none;
+		display:block;
+		border-radius:5px;
+		width:85px;
+		background:#fa6e13;
+		color:#FFF;
+		float:right;
+		margin:5px 0;
+		padding:8px;
+	}
+
+		section.pictureandtext a:hover
+		{
+				color:#FFF;
+			background:#81bae3;
+		}
+
+		section.pictureandtext a:active
+		{
+			color:#000;
+		}
+
+footer
+{
+	border:1px solid #000;
+	background:#FFF;
+	clear:both;
+	padding:20px;
+	text-align:center;
+}
+
+
+/* *** CONDITIONAL STYLING FOR RESPONSIVE DESIGN *** */
+
+@media only screen and (max-width: 1040px) {
+	body
+	{
+		width:800px;
+	}
+	
+	header > span
+	{
+		padding:15px 0;
+	}
+	
+	section.tabledata
+	{
+		display:inline;
+		margin:0 auto;
+	}
+	
+	section.tabledata table
+	{
+		width:100%;
+	}
+	
+	section.pictureandtext
+	{
+		display:inline;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	section.pictureandtext img
+	{
+		width:350px;
+		height:225px;
+		display:block;
+		margin:5px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	body
+	{
+		width:680px;
+	}
+	
+	header > span
+	{
+		padding:15px 0;
+	}
+	
+	section.tabledata
+	{
+		display:inline;
+		margin:0 auto;
+	}
+	
+	section.tabledata table
+	{
+		width:100%;
+	}
+	
+	section.pictureandtext
+	{
+		display:inline;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	section.pictureandtext img
+	{
+		width:350px;
+		height:225px;
+		display:block;
+		margin:5px;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	body
+	{
+		width:480px;
+	}
+	
+	header.header > span
+	{
+		display:none;
+	}
+	
+	section.tabledata
+	{
+		display:inline;
+		margin:0 auto;
+	}
+	
+	section.tabledata table
+	{
+		width:100%;
+	}
+	
+	section.pictureandtext
+	{
+		display:inline;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	section.pictureandtext img
+	{
+		width:300px;
+		height:175px;
+		display:block;
+		margin:5px;
+	}
+	
+	header > span
+	{
+		padding:10px 0;
+	}
+	
+	section.pictureandtext p{
+		text-align: left;
+	}
+	
+}
+
+@media only screen and (max-width: 480px) {
+	body
+	{
+		width:400px;
+	}
+	
+	header.header > span
+	{
+		display:none;
+	}
+	
+	section.tabledata
+	{
+		display:inline;
+		margin:0 auto;
+	}
+	
+	section.tabledata table
+	{
+		width:100%;
+	}
+	
+	section.pictureandtext
+	{
+		display:inline;
+		width:100%;
+		margin:0 auto;
+	}
+	
+	section.pictureandtext img
+	{
+		width:100%;
+		height:225px;
+		display:block;
+		margin:5px;
+	}
+	
+	
+}

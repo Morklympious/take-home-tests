@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Spiceworks UI Test</title>
+    <link href="css/application.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- WELCOME TO THE MAIN EVENT, CODE EVALUATORS. -->
+    <!-- Well, I suppose the main event comes later. -->
+
+    <!-- WELCOME TO THE PENULTIMATE PENULTIMATE EVENT -->
+  
+    <div id="main-content" class="js event-delegator">
+
+      <!-- The page width is 817px -->
+      <!-- Example of using the form CSS to help you out. -->
+      <!-- I've added .js and other classes to help target nodes -->
+      <form class="js employee-form">
+        <div>
+          <label>Full Name</label>
+          <!-- Name attr is required, otherwise an error will be logged! --> 
+          <input class="js input form-name" name="name" type="text" required />
+        </div>
+        <div>
+          <label>Photo URL</label>
+          <input class="js input form-avatar" name="photo_url" />
+        </div>
+        <button class="js form-submit" type="submit">Create</button>
+      </form>
+
+      <hr />
+
+      <!-- Employee list goes here. There is initial data for you in application.js -->
+      <div class="employee-list-container">
+
+        <!-- List items are generated via javascript -->
+        <ul class="employee-list js">
+        </ul>
+      </div>
+
+
+    </div>
+    
+     <!-- 
+      Employee template to create new employees 
+      We have one block of HTML representing a single employee
+      and we're going to use this template aggressively to populate
+      the list as well as add new employees when we feel so inclined
+      --> 
+    <script id="employee-template" type="text/template">
+      <li class="js employee">
+        <div class="employee-content content-group">
+          <span class="js employee-remove"></span>
+          <div class="employee-content-photo">
+            <img class="employee-avatar" />
+          </div>
+          <div class="employee-content-name">
+            <p class="employee-name"></p>
+          </div>
+        </div>
+      </li>
+    </script>
+
+    <!-- 
+         Move scripts to prevent render blocking and also to ensure that
+         DOM elements we're trying to access in js actually exist
+    -->
+
+    <!-- Vendor -->
+    <script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="js/vendor/underscore.js" type="text/javascript"></script>
+
+    <!-- Modules -->
+    <script src="js/employees.js" type="text/javascript"></script>
+    <script src="js/behavior.js" type="text/javascript"></script>
+
+    <!-- Application --> 
+    <script src="js/application.js" type="text/javascript"></script>
+
+  </body>
+</html>
