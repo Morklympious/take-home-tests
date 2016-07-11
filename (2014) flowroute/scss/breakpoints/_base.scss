@@ -1,0 +1,462 @@
+/****************************************************************
+Site Name: Flowroute Mockup
+Author: Bradley Stafford
+
+    
+BASE STYLESHEET - Every device will load this. Keep it light. 
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-family: $primary-font;
+	font-size: 100%;
+	line-height: 1.5;
+	color: $body-text;
+	background-color: $content-background; 
+    -webkit-font-smoothing: antialiased;
+    background: $white; 
+}
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	display:block;
+	margin: 0 auto;
+    padding: 0 5px;
+}
+
+
+/*******************************
+GOOD OL' STYLES ADDED BY BRADLEY
+********************************/
+/****************************************************************
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+
+a{
+    color: $box-blue;
+}
+/********************************************* 
+    GENERAL (TERMINATION, ORIGINATION, PORTS) 
+*********************************************/
+
+
+section.page-section{
+ 
+    margin-bottom: 20px;
+
+    input[type="text"]{
+        margin: 0 auto; 
+        width: 100%;
+    }
+    .top-bar{
+        text-align: center; 
+        padding: 0 5px;
+        color: $white;
+        background: $header-background; 
+        padding: 5px;
+        
+            
+        .action-description{
+            margin-bottom: 15px;
+
+            .primary-heading, .secondary-heading{
+                margin: 0;
+            }
+
+            .primary-heading{
+                height:1.2em;
+                font-size: 2.2em;
+            }
+
+            .secondary-heading{
+                vertical-align:text-top;
+                font-size: 12px;
+                font-weight: bold;
+                text-transform: uppercase; 
+                color: $light-gray;
+            }
+        }        
+    }
+
+    /* Content boxes containing information */ 
+    .inner-content{
+        
+        section{
+            margin-top: 15px;
+        }   
+
+       
+        margin: 5px;
+        
+        .inner-box{
+            padding: 13px 0px;
+            background: $white; 
+
+             .price-details{
+                padding-top: 15px;
+                
+                div{
+                   
+                    text-align: center; 
+                    margin:15px auto; 
+
+                    &.starting-at{
+                      @include detail-text; 
+                        font-weight: bold; 
+                        margin-bottom: 0; 
+                        height: 10px;
+                    }
+                     &.price-per{
+                         
+                        font-size: 48px;
+                        font-weight: bold; 
+                        sup{
+                            font-size: 24px;
+                         }
+                    }
+
+                    &.per-measure{
+                        @include detail-text;
+                        text-transform:none;
+                        font-weight: bold; 
+                        font-size: 12px;
+                    }
+                }           
+            }
+        }
+
+           /* TABLE */
+        .flowroute-table{
+
+            font-size: 14px;
+            vertical-align: top; 
+            color: $body-text;
+            width: 100%;
+
+            table{
+              width: 100%;
+                tr{
+
+                    border-bottom: 1px solid $separator-gray; 
+
+                    th, td{
+                        &:first-child{text-align:left;}
+                        &:last-child{text-align: right;} 
+                    }
+
+                    th{
+
+                        @include detail-text; 
+                        border-bottom: 5px solid $light-gray;
+                        padding: 0; 
+                        font-weight: bold; 
+                        color: $black;
+
+                    }
+
+                    td{
+                         height: 42px; 
+                         &:first-child{font-weight: bold;}
+
+                    }
+                }  
+            } 
+        }
+    } 
+}
+
+ /*********************************************** 
+    END GENERAL (TERMINATION, ORIGINATION, PORTS) 
+ **********************************************/ 
+/********************************************** 
+        TERMINATION 
+ *********************************************/
+#termination{  
+
+
+    .phone-search-bar{
+        input{
+            font-size: 20px;
+            padding-left: 65px;
+            background: $white url(../images/phoneicon.png) 8px 0px no-repeat;
+        }
+    }
+
+    /* Download A-Z */
+    .download{
+
+        i{
+            @include button-icon;
+            margin-right: 5px;
+            float: none; 
+        }   
+
+        h3{
+            
+            margin: 10px auto 0;
+            text-align: center; 
+        }
+
+        button{
+            @include fr-btn(100%, 50px);
+            margin: 5px auto; 
+            font-size: 16px;
+            padding: 0 17px 0 0;
+            color: $white; 
+            text-align: center; 
+        }
+
+    }
+    /* END HEADER */ 
+
+    /* INSIDE THE BOX */ 
+    #pricing-box{
+        /* Country/Pricing Box */
+        .country-details{
+
+            padding: 0 24px 20px 24px;
+            border-bottom: 1px solid $separator-gray; 
+
+            .c-destination{ 
+                display: inline-block;
+                text-align: left; 
+                 width: 151px;
+                h3, h4{
+                    margin: 0;
+                }
+                h3{
+                    @include detail-text;
+                }
+                img{
+                    float:left;
+                    margin-right: 10px;
+                }
+                span{
+                    font-size:10px;
+                    vertical-align: super; 
+                }
+            }
+        }
+        .c-code{
+            float: right;
+            display: inline-block;
+            text-align: right; 
+
+            h3, h4{
+                margin: 0;
+            }
+
+            h3{
+                @include detail-text;
+            }
+        }  
+    }
+
+     /* Table interaction */ 
+    .table-interaction{
+
+        .table-pages{
+            display: block; 
+            text-align: center; 
+             a{
+                color: $light-gray;
+                text-decoration: none;
+                font-weight: bolder; 
+                font-size: 20px;
+                padding: 0 6px;
+                
+
+                &:hover{
+                    color: $black;        
+                }
+
+                &.active{
+                    border-bottom: 3px solid $light-gray;
+                    color: $black;
+                }
+            } 
+        }
+
+        button{
+            @include fr-table-btn(50%, 30px);
+            display: block;
+            margin: 10px auto; 
+            text-align: center;
+
+            i{
+                @include button-icon;  
+                padding-left: 8px;
+              
+            }  
+        }   
+    }
+
+    
+    footer{  
+        text-align: center; 
+        .footnote{
+            
+            color: $light-gray; 
+            font-weight: bold; 
+        }
+    } 
+
+}
+     
+
+    /****************************** 
+        END TERMINATION 
+    *******************************/
+
+    /****************************** 
+        BEGIN ORIGINATION
+    *******************************/
+
+#origination{
+
+    
+        #side-message{            
+            @include header-right-base;
+            background: none; 
+            
+            p{
+                font-size: 13px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    
+
+    /* Wrappers to help with positioning of toggles and content */ 
+    .left-boxes, .right-boxes{
+        vertical-align: top; 
+         margin-top: 15px;
+    }
+
+    /* Contains the Toggle, and the content the toggle triggers. */
+    .box-container{
+        .box-heading{
+            margin-top: 0; 
+            text-align: center; 
+        }  
+
+        .box-toggle{
+            height: 50px;
+            background: $box-gray;
+            text-align: center; 
+            color: $disabled; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 15px 0;
+            cursor:pointer;
+
+            &.active{
+                background: $box-blue;
+                color: $white; 
+               
+                i{
+                    color: white; 
+                }
+                
+            }
+            
+            .icon{
+                float: left; 
+                font-size: 24px;
+                color: $disabled;
+                position: relative;
+                bottom: 5px;
+                left:15px; 
+            }
+
+          
+        }
+    }
+    /* End Box Container */
+
+    /* Transfer link */
+    .transfer{
+        color: $external-link;
+    }
+    
+    /* Styles specfic to this sections inner box property */ 
+   .inner-box{
+      
+       height: auto;
+       display: none; 
+        
+       &.active{
+           display: block; 
+       }
+
+       .price-details{
+           padding: 0; 
+
+           .price-per .per-ymd{
+               display:block;
+               font-size: 14px;
+               margin-top: -15px;
+           }
+           
+           .per-measure{
+               margin-top: 25px;
+               font-size: 10px;
+           }
+       }
+    }
+
+}
+    /****************************** 
+        END ORIGINATION
+    *******************************/
+    /****************************** 
+        BEGIN PORTS
+    *******************************/
+#ports{
+    
+    padding-bottom: 20px;
+
+    #phone-number{
+       
+        input[type="text"]{
+            width: 100%;
+            height: 50px;
+             border: 1px solid $light-gray;
+        }
+        input[type="submit"]{
+            @include fr-btn(100%, 50px); 
+            margin-top: 10px;
+            color: $white;
+            text-align: center;
+            display: block; 
+            font-size: 16px;
+           
+        }
+        a{
+            font-size: 16px;
+            margin: 5px 0 0 5px;
+            
+        }
+        
+    }
+
+}
+
+
+    /****************************** 
+        END PORTS
+    *******************************/

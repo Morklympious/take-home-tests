@@ -1,0 +1,2232 @@
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 23, ../scss/partials/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 33, ../scss/partials/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 42, ../scss/partials/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 53, ../scss/partials/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 67, ../scss/partials/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 77, ../scss/partials/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, ../scss/partials/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 97, ../scss/partials/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 106, ../scss/partials/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 119, ../scss/partials/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 128, ../scss/partials/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 138, ../scss/partials/_normalize.scss */
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 148, ../scss/partials/_normalize.scss */
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 156, ../scss/partials/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
+*/
+/* line 166, ../scss/partials/_normalize.scss */
+p {
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+/* line 177, ../scss/partials/_normalize.scss */
+pre {
+  margin: 0;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 188, ../scss/partials/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 197, ../scss/partials/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 205, ../scss/partials/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 213, ../scss/partials/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 218, ../scss/partials/_normalize.scss */
+small, .small {
+  font-size: 75%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 227, ../scss/partials/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 234, ../scss/partials/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 238, ../scss/partials/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+  Lists
+========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+/* line 253, ../scss/partials/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 257, ../scss/partials/_normalize.scss */
+dd {
+  margin: 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+/* line 265, ../scss/partials/_normalize.scss */
+menu {
+  padding: 0 0 0 40px;
+}
+
+/* line 270, ../scss/partials/_normalize.scss */
+ol,
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+/* line 280, ../scss/partials/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+  Embedded content
+========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 293, ../scss/partials/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 301, ../scss/partials/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 313, ../scss/partials/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 325, ../scss/partials/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 336, ../scss/partials/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 350, ../scss/partials/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 362, ../scss/partials/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 374, ../scss/partials/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 389, ../scss/partials/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 399, ../scss/partials/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 409, ../scss/partials/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 420, ../scss/partials/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 433, ../scss/partials/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 442, ../scss/partials/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 452, ../scss/partials/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 465, ../scss/partials/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 472, ../scss/partials/_normalize.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 480, ../scss/partials/_normalize.scss */
+.image-replacement,
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 487, ../scss/partials/_normalize.scss */
+.clearfix, .cf {
+  zoom: 1;
+}
+/* line 489, ../scss/partials/_normalize.scss */
+.clearfix:before, .clearfix:after, .cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+/* line 490, ../scss/partials/_normalize.scss */
+.clearfix:after, .cf:after {
+  clear: both;
+}
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 497, ../scss/partials/_normalize.scss */
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+
+/******************************************************************
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+/* line 43, ../scss/partials/_typography.scss */
+p {
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
+  word-break: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+******************************************************************/
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+/* Mixins */
+/*********************
+TRANSITION
+*********************/
+/*********************
+    BOX SHADOW
+*********************/
+/* @extend doesn't work with nested selectors, so this is now a mixin */
+/*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+/******************************************************************
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+/*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+Here's a quick video to show how it works:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Form Styles
+
+We put all the form and button styles in here to setup a consistent
+look. If we need to customize them, we can do this in the main
+stylesheets and just override them. Easy Peasy.
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+/*********************
+INPUTS
+*********************/
+/* line 40, ../scss/modules/_forms.scss */
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea,
+.field {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1em;
+  color: #393f40;
+  border-radius: 3px;
+  vertical-align: middle;
+  box-shadow: none;
+  border: 0;
+  width: 500px;
+  font-family: "Monsterrat" "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: white;
+  -webkit-transition: background-color 0.24s ease-in-out;
+  -moz-transition: background-color 0.24s ease-in-out;
+  -ms-transition: background-color 0.24s ease-in-out;
+  -o-transition: background-color 0.24s ease-in-out;
+}
+/* line 57, ../scss/modules/_forms.scss */
+input[type="text"]:focus, input[type="text"]:active,
+input[type="password"]:focus,
+input[type="password"]:active,
+input[type="datetime"]:focus,
+input[type="datetime"]:active,
+input[type="datetime-local"]:focus,
+input[type="datetime-local"]:active,
+input[type="date"]:focus,
+input[type="date"]:active,
+input[type="month"]:focus,
+input[type="month"]:active,
+input[type="time"]:focus,
+input[type="time"]:active,
+input[type="week"]:focus,
+input[type="week"]:active,
+input[type="number"]:focus,
+input[type="number"]:active,
+input[type="email"]:focus,
+input[type="email"]:active,
+input[type="url"]:focus,
+input[type="url"]:active,
+input[type="search"]:focus,
+input[type="search"]:active,
+input[type="tel"]:focus,
+input[type="tel"]:active,
+input[type="color"]:focus,
+input[type="color"]:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active,
+.field:focus,
+.field:active {
+  background-color: white;
+}
+/* line 63, ../scss/modules/_forms.scss */
+input[type="text"].error, input[type="text"].is-invalid,
+input[type="password"].error,
+input[type="password"].is-invalid,
+input[type="datetime"].error,
+input[type="datetime"].is-invalid,
+input[type="datetime-local"].error,
+input[type="datetime-local"].is-invalid,
+input[type="date"].error,
+input[type="date"].is-invalid,
+input[type="month"].error,
+input[type="month"].is-invalid,
+input[type="time"].error,
+input[type="time"].is-invalid,
+input[type="week"].error,
+input[type="week"].is-invalid,
+input[type="number"].error,
+input[type="number"].is-invalid,
+input[type="email"].error,
+input[type="email"].is-invalid,
+input[type="url"].error,
+input[type="url"].is-invalid,
+input[type="search"].error,
+input[type="search"].is-invalid,
+input[type="tel"].error,
+input[type="tel"].is-invalid,
+input[type="color"].error,
+input[type="color"].is-invalid,
+select.error,
+select.is-invalid,
+textarea.error,
+textarea.is-invalid,
+.field.error,
+.field.is-invalid {
+  color: red;
+  border-color: red;
+  background-color: white;
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
+  outline-color: red;
+}
+/* line 75, ../scss/modules/_forms.scss */
+input[type="text"].success, input[type="text"].is-valid,
+input[type="password"].success,
+input[type="password"].is-valid,
+input[type="datetime"].success,
+input[type="datetime"].is-valid,
+input[type="datetime-local"].success,
+input[type="datetime-local"].is-valid,
+input[type="date"].success,
+input[type="date"].is-valid,
+input[type="month"].success,
+input[type="month"].is-valid,
+input[type="time"].success,
+input[type="time"].is-valid,
+input[type="week"].success,
+input[type="week"].is-valid,
+input[type="number"].success,
+input[type="number"].is-valid,
+input[type="email"].success,
+input[type="email"].is-valid,
+input[type="url"].success,
+input[type="url"].is-valid,
+input[type="search"].success,
+input[type="search"].is-valid,
+input[type="tel"].success,
+input[type="tel"].is-valid,
+input[type="color"].success,
+input[type="color"].is-valid,
+select.success,
+select.is-valid,
+textarea.success,
+textarea.is-valid,
+.field.success,
+.field.is-valid {
+  color: green;
+  border-color: green;
+  background-color: white;
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
+  outline-color: green;
+}
+/* line 87, ../scss/modules/_forms.scss */
+input[type="text"][disabled], input[type="text"].is-disabled,
+input[type="password"][disabled],
+input[type="password"].is-disabled,
+input[type="datetime"][disabled],
+input[type="datetime"].is-disabled,
+input[type="datetime-local"][disabled],
+input[type="datetime-local"].is-disabled,
+input[type="date"][disabled],
+input[type="date"].is-disabled,
+input[type="month"][disabled],
+input[type="month"].is-disabled,
+input[type="time"][disabled],
+input[type="time"].is-disabled,
+input[type="week"][disabled],
+input[type="week"].is-disabled,
+input[type="number"][disabled],
+input[type="number"].is-disabled,
+input[type="email"][disabled],
+input[type="email"].is-disabled,
+input[type="url"][disabled],
+input[type="url"].is-disabled,
+input[type="search"][disabled],
+input[type="search"].is-disabled,
+input[type="tel"][disabled],
+input[type="tel"].is-disabled,
+input[type="color"][disabled],
+input[type="color"].is-disabled,
+select[disabled],
+select.is-disabled,
+textarea[disabled],
+textarea.is-disabled,
+.field[disabled],
+.field.is-disabled {
+  cursor: not-allowed;
+  border-color: gray;
+  opacity: 0.6;
+}
+/* line 93, ../scss/modules/_forms.scss */
+input[type="text"][disabled]:focus, input[type="text"][disabled]:active, input[type="text"].is-disabled:focus, input[type="text"].is-disabled:active,
+input[type="password"][disabled]:focus,
+input[type="password"][disabled]:active,
+input[type="password"].is-disabled:focus,
+input[type="password"].is-disabled:active,
+input[type="datetime"][disabled]:focus,
+input[type="datetime"][disabled]:active,
+input[type="datetime"].is-disabled:focus,
+input[type="datetime"].is-disabled:active,
+input[type="datetime-local"][disabled]:focus,
+input[type="datetime-local"][disabled]:active,
+input[type="datetime-local"].is-disabled:focus,
+input[type="datetime-local"].is-disabled:active,
+input[type="date"][disabled]:focus,
+input[type="date"][disabled]:active,
+input[type="date"].is-disabled:focus,
+input[type="date"].is-disabled:active,
+input[type="month"][disabled]:focus,
+input[type="month"][disabled]:active,
+input[type="month"].is-disabled:focus,
+input[type="month"].is-disabled:active,
+input[type="time"][disabled]:focus,
+input[type="time"][disabled]:active,
+input[type="time"].is-disabled:focus,
+input[type="time"].is-disabled:active,
+input[type="week"][disabled]:focus,
+input[type="week"][disabled]:active,
+input[type="week"].is-disabled:focus,
+input[type="week"].is-disabled:active,
+input[type="number"][disabled]:focus,
+input[type="number"][disabled]:active,
+input[type="number"].is-disabled:focus,
+input[type="number"].is-disabled:active,
+input[type="email"][disabled]:focus,
+input[type="email"][disabled]:active,
+input[type="email"].is-disabled:focus,
+input[type="email"].is-disabled:active,
+input[type="url"][disabled]:focus,
+input[type="url"][disabled]:active,
+input[type="url"].is-disabled:focus,
+input[type="url"].is-disabled:active,
+input[type="search"][disabled]:focus,
+input[type="search"][disabled]:active,
+input[type="search"].is-disabled:focus,
+input[type="search"].is-disabled:active,
+input[type="tel"][disabled]:focus,
+input[type="tel"][disabled]:active,
+input[type="tel"].is-disabled:focus,
+input[type="tel"].is-disabled:active,
+input[type="color"][disabled]:focus,
+input[type="color"][disabled]:active,
+input[type="color"].is-disabled:focus,
+input[type="color"].is-disabled:active,
+select[disabled]:focus,
+select[disabled]:active,
+select.is-disabled:focus,
+select.is-disabled:active,
+textarea[disabled]:focus,
+textarea[disabled]:active,
+textarea.is-disabled:focus,
+textarea.is-disabled:active,
+.field[disabled]:focus,
+.field[disabled]:active,
+.field.is-disabled:focus,
+.field.is-disabled:active {
+  background-color: blue;
+}
+
+/* line 102, ../scss/modules/_forms.scss */
+textarea {
+  max-width: 100%;
+  min-height: 120px;
+  line-height: 1.5em;
+}
+
+/* line 109, ../scss/modules/_forms.scss */
+select {
+  -webkit-appearance: none;
+  /* 1 */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOEZCMjYxMEYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOEZCMjYxMUYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4RkIyNjBFRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ4RkIyNjBGRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vxkp9gAAAI9JREFUeNpidHFxucHAwKAOxE+AmJmBMPgLxDJAfJMFSKwD4kqoAClgA+P///8ZXF1dPaCGcBKh6QcQB+3evXs7WDMIAA2QB1I7gFgDj0aQFz2BGh+AOEwwUaDAQyBlCMR7cGjcC5KHaQQBuM3IAOiKTiBVhiTUDdRUhq4Oq2aoAelAahIQ5wM1zsCmBiDAADhYMJXVZ9u9AAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: 97.5% center;
+}
+
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+/****************************************************************
+Site Name: Flowroute Mockup
+Author: Bradley Stafford
+
+    
+BASE STYLESHEET - Every device will load this. Keep it light. 
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/* line 13, ../scss/breakpoints/_base.scss */
+body {
+  font-family: "Monsterrat" "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #393f40;
+  background-color: #ecf0f1;
+  -webkit-font-smoothing: antialiased;
+  background: white;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 28, ../scss/breakpoints/_base.scss */
+.wrap {
+  display: block;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+/*******************************
+GOOD OL' STYLES ADDED BY BRADLEY
+********************************/
+/****************************************************************
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+/* line 47, ../scss/breakpoints/_base.scss */
+a {
+  color: #01adc9;
+}
+
+/********************************************* 
+    GENERAL (TERMINATION, ORIGINATION, PORTS) 
+*********************************************/
+/* line 55, ../scss/breakpoints/_base.scss */
+section.page-section {
+  margin-bottom: 20px;
+  /* Content boxes containing information */
+}
+/* line 59, ../scss/breakpoints/_base.scss */
+section.page-section input[type="text"] {
+  margin: 0 auto;
+  width: 100%;
+}
+/* line 63, ../scss/breakpoints/_base.scss */
+section.page-section .top-bar {
+  text-align: center;
+  padding: 0 5px;
+  color: white;
+  background: #454c4d;
+  padding: 5px;
+}
+/* line 71, ../scss/breakpoints/_base.scss */
+section.page-section .top-bar .action-description {
+  margin-bottom: 15px;
+}
+/* line 74, ../scss/breakpoints/_base.scss */
+section.page-section .top-bar .action-description .primary-heading, section.page-section .top-bar .action-description .secondary-heading {
+  margin: 0;
+}
+/* line 78, ../scss/breakpoints/_base.scss */
+section.page-section .top-bar .action-description .primary-heading {
+  height: 1.2em;
+  font-size: 2.2em;
+}
+/* line 83, ../scss/breakpoints/_base.scss */
+section.page-section .top-bar .action-description .secondary-heading {
+  vertical-align: text-top;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #95a5a6;
+}
+/* line 94, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content {
+  margin: 5px;
+  /* TABLE */
+}
+/* line 96, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content section {
+  margin-top: 15px;
+}
+/* line 103, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .inner-box {
+  padding: 13px 0px;
+  background: white;
+}
+/* line 107, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .inner-box .price-details {
+  padding-top: 15px;
+}
+/* line 110, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .inner-box .price-details div {
+  text-align: center;
+  margin: 15px auto;
+}
+/* line 115, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .inner-box .price-details div.starting-at {
+  font-size: 14px;
+  color: #95a5a6;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+  height: 10px;
+}
+/* line 121, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .inner-box .price-details div.price-per {
+  font-size: 48px;
+  font-weight: bold;
+}
+/* line 125, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .inner-box .price-details div.price-per sup {
+  font-size: 24px;
+}
+/* line 130, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .inner-box .price-details div.per-measure {
+  font-size: 14px;
+  color: #95a5a6;
+  text-transform: uppercase;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+/* line 141, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .flowroute-table {
+  font-size: 14px;
+  vertical-align: top;
+  color: #393f40;
+  width: 100%;
+}
+/* line 148, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .flowroute-table table {
+  width: 100%;
+}
+/* line 150, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .flowroute-table table tr {
+  border-bottom: 1px solid #ced9db;
+}
+/* line 155, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .flowroute-table table tr th:first-child, section.page-section .inner-content .flowroute-table table tr td:first-child {
+  text-align: left;
+}
+/* line 156, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .flowroute-table table tr th:last-child, section.page-section .inner-content .flowroute-table table tr td:last-child {
+  text-align: right;
+}
+/* line 159, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .flowroute-table table tr th {
+  font-size: 14px;
+  color: #95a5a6;
+  text-transform: uppercase;
+  border-bottom: 5px solid #95a5a6;
+  padding: 0;
+  font-weight: bold;
+  color: #323944;
+}
+/* line 169, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .flowroute-table table tr td {
+  height: 42px;
+}
+/* line 171, ../scss/breakpoints/_base.scss */
+section.page-section .inner-content .flowroute-table table tr td:first-child {
+  font-weight: bold;
+}
+
+/*********************************************** 
+   END GENERAL (TERMINATION, ORIGINATION, PORTS) 
+**********************************************/
+/********************************************** 
+        TERMINATION 
+ *********************************************/
+/* line 186, ../scss/breakpoints/_base.scss */
+#termination {
+  /* Download A-Z */
+  /* END HEADER */
+  /* INSIDE THE BOX */
+  /* Table interaction */
+}
+/* line 190, ../scss/breakpoints/_base.scss */
+#termination .phone-search-bar input {
+  font-size: 20px;
+  padding-left: 65px;
+  background: white url(../images/phoneicon.png) 8px 0px no-repeat;
+}
+/* line 200, ../scss/breakpoints/_base.scss */
+#termination .download i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: white;
+  margin-right: 5px;
+  float: none;
+}
+/* line 206, ../scss/breakpoints/_base.scss */
+#termination .download h3 {
+  margin: 10px auto 0;
+  text-align: center;
+}
+/* line 212, ../scss/breakpoints/_base.scss */
+#termination .download button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  background: #01adc9;
+  color: #393f40;
+  font-size: 8pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right;
+  border: none;
+  margin: 5px auto;
+  font-size: 16px;
+  padding: 0 17px 0 0;
+  color: white;
+  text-align: center;
+}
+/* line 68, ../scss/partials/_mixins.scss */
+#termination .download button:active {
+  color: white;
+}
+/* line 225, ../scss/breakpoints/_base.scss */
+#termination #pricing-box {
+  /* Country/Pricing Box */
+}
+/* line 227, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .country-details {
+  padding: 0 24px 20px 24px;
+  border-bottom: 1px solid #ced9db;
+}
+/* line 232, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .country-details .c-destination {
+  display: inline-block;
+  text-align: left;
+  width: 151px;
+}
+/* line 236, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .country-details .c-destination h3, #termination #pricing-box .country-details .c-destination h4 {
+  margin: 0;
+}
+/* line 239, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .country-details .c-destination h3 {
+  font-size: 14px;
+  color: #95a5a6;
+  text-transform: uppercase;
+}
+/* line 242, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .country-details .c-destination img {
+  float: left;
+  margin-right: 10px;
+}
+/* line 246, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .country-details .c-destination span {
+  font-size: 10px;
+  vertical-align: super;
+}
+/* line 252, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .c-code {
+  float: right;
+  display: inline-block;
+  text-align: right;
+}
+/* line 257, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .c-code h3, #termination #pricing-box .c-code h4 {
+  margin: 0;
+}
+/* line 261, ../scss/breakpoints/_base.scss */
+#termination #pricing-box .c-code h3 {
+  font-size: 14px;
+  color: #95a5a6;
+  text-transform: uppercase;
+}
+/* line 270, ../scss/breakpoints/_base.scss */
+#termination .table-interaction .table-pages {
+  display: block;
+  text-align: center;
+}
+/* line 273, ../scss/breakpoints/_base.scss */
+#termination .table-interaction .table-pages a {
+  color: #95a5a6;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 0 6px;
+}
+/* line 281, ../scss/breakpoints/_base.scss */
+#termination .table-interaction .table-pages a:hover {
+  color: #323944;
+}
+/* line 285, ../scss/breakpoints/_base.scss */
+#termination .table-interaction .table-pages a.active {
+  border-bottom: 3px solid #95a5a6;
+  color: #323944;
+}
+/* line 292, ../scss/breakpoints/_base.scss */
+#termination .table-interaction button {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  width: 50%;
+  height: 30px;
+  background: #b1c2c6;
+  color: #393f40;
+  font-size: 8pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  text-align: right;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+/* line 50, ../scss/partials/_mixins.scss */
+#termination .table-interaction button:active {
+  color: white;
+}
+/* line 298, ../scss/breakpoints/_base.scss */
+#termination .table-interaction button i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: white;
+  padding-left: 8px;
+}
+/* line 307, ../scss/breakpoints/_base.scss */
+#termination footer {
+  text-align: center;
+}
+/* line 309, ../scss/breakpoints/_base.scss */
+#termination footer .footnote {
+  color: #95a5a6;
+  font-weight: bold;
+}
+
+/****************************** 
+    END TERMINATION 
+*******************************/
+/****************************** 
+    BEGIN ORIGINATION
+*******************************/
+/* line 327, ../scss/breakpoints/_base.scss */
+#origination {
+  /* Wrappers to help with positioning of toggles and content */
+  /* Contains the Toggle, and the content the toggle triggers. */
+  /* End Box Container */
+  /* Transfer link */
+  /* Styles specfic to this sections inner box property */
+}
+/* line 330, ../scss/breakpoints/_base.scss */
+#origination #side-message {
+  width: auto;
+  text-align: center;
+  background: #2d3233;
+  background: none;
+}
+/* line 334, ../scss/breakpoints/_base.scss */
+#origination #side-message p {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+/* line 344, ../scss/breakpoints/_base.scss */
+#origination .left-boxes, #origination .right-boxes {
+  vertical-align: top;
+  margin-top: 15px;
+}
+/* line 351, ../scss/breakpoints/_base.scss */
+#origination .box-container .box-heading {
+  margin-top: 0;
+  text-align: center;
+}
+/* line 356, ../scss/breakpoints/_base.scss */
+#origination .box-container .box-toggle {
+  height: 50px;
+  background: #e0e7e8;
+  text-align: center;
+  color: #838a8b;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+/* line 367, ../scss/breakpoints/_base.scss */
+#origination .box-container .box-toggle.active {
+  background: #01adc9;
+  color: white;
+}
+/* line 371, ../scss/breakpoints/_base.scss */
+#origination .box-container .box-toggle.active i {
+  color: white;
+}
+/* line 377, ../scss/breakpoints/_base.scss */
+#origination .box-container .box-toggle .icon {
+  float: left;
+  font-size: 24px;
+  color: #838a8b;
+  position: relative;
+  bottom: 5px;
+  left: 15px;
+}
+/* line 392, ../scss/breakpoints/_base.scss */
+#origination .transfer {
+  color: #e08f23;
+}
+/* line 397, ../scss/breakpoints/_base.scss */
+#origination .inner-box {
+  height: auto;
+  display: none;
+}
+/* line 402, ../scss/breakpoints/_base.scss */
+#origination .inner-box.active {
+  display: block;
+}
+/* line 406, ../scss/breakpoints/_base.scss */
+#origination .inner-box .price-details {
+  padding: 0;
+}
+/* line 409, ../scss/breakpoints/_base.scss */
+#origination .inner-box .price-details .price-per .per-ymd {
+  display: block;
+  font-size: 14px;
+  margin-top: -15px;
+}
+/* line 415, ../scss/breakpoints/_base.scss */
+#origination .inner-box .price-details .per-measure {
+  margin-top: 25px;
+  font-size: 10px;
+}
+
+/****************************** 
+    END ORIGINATION
+*******************************/
+/****************************** 
+    BEGIN PORTS
+*******************************/
+/* line 429, ../scss/breakpoints/_base.scss */
+#ports {
+  padding-bottom: 20px;
+}
+/* line 435, ../scss/breakpoints/_base.scss */
+#ports #phone-number input[type="text"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #95a5a6;
+}
+/* line 440, ../scss/breakpoints/_base.scss */
+#ports #phone-number input[type="submit"] {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  background: #01adc9;
+  color: #393f40;
+  font-size: 8pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right;
+  border: none;
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+}
+/* line 68, ../scss/partials/_mixins.scss */
+#ports #phone-number input[type="submit"]:active {
+  color: white;
+}
+/* line 449, ../scss/breakpoints/_base.scss */
+#ports #phone-number a {
+  font-size: 16px;
+  margin: 5px 0 0 5px;
+}
+
+/****************************** 
+    END PORTS
+*******************************/
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+  /*****************************************************************
+  Site Name: Flowroute Mockup
+  Author: Bradley Stafford
+    
+  Stylesheet: 481px and Up Stylesheet
+  
+  This stylesheet is loaded for larger devices. It's set to
+  481px because at 480px it would load on a landscaped iPhone.
+  This isn't ideal because then you would be loading all those
+  extra styles on that same mobile connection.
+  
+  A word of warning. This size COULD be a larger mobile device,
+  so you still want to keep it pretty light and simply expand
+  upon your base.scss styles.
+  
+  ******************************************************************/
+  /**********************************************
+      GOOD OL' STYLES ADDED BY BRADLEY
+  **********************************************/
+  /********************************************** 
+          TERMINATION 
+   *********************************************/
+  /* line 27, ../scss/breakpoints/_481up.scss */
+  #termination input[type="text"] {
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+    background: white url(../images/phoneicon.png) 8px 16px no-repeat;
+    font-size: 28px;
+  }
+  /* line 35, ../scss/breakpoints/_481up.scss */
+  #termination .download {
+    font-size: 20px;
+  }
+  /* line 38, ../scss/breakpoints/_481up.scss */
+  #termination .download button {
+    font-size: 16px;
+  }
+  /* line 40, ../scss/breakpoints/_481up.scss */
+  #termination .download button i {
+    font-size: 16px;
+  }
+  /* line 48, ../scss/breakpoints/_481up.scss */
+  #termination #pricing-box .starting-at {
+    font-size: 18px;
+  }
+  /* line 51, ../scss/breakpoints/_481up.scss */
+  #termination #pricing-box .price-per {
+    font-size: 72px;
+  }
+  /* line 54, ../scss/breakpoints/_481up.scss */
+  #termination #pricing-box .per-measure {
+    font-size: 18px;
+  }
+  /* line 60, ../scss/breakpoints/_481up.scss */
+  #termination #pricing-box .country-details .c-destination .c-detail {
+    font-size: 24px;
+    width: 240px;
+  }
+  /* line 64, ../scss/breakpoints/_481up.scss */
+  #termination #pricing-box .country-details .c-destination span {
+    font-size: 16px;
+  }
+
+  /******************************************* 
+      END TERMINATION 
+  ********************************************/
+}
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+  Site Name: Flowroute Mockup
+  Author: Bradley Stafford
+  
+  Stylesheet: Tablet & Small Desktop Stylesheet
+  
+  Here's where you can start getting into the good stuff.
+  This size will work on iPads, other tablets, and desktops.
+  So you can start working with more styles, background images,
+  and other resources. You'll also notice the grid starts to
+  come into play. Have fun!
+  
+  ******************************************************************/
+  /**********************************************
+      GOOD OL' STYLES ADDED BY BRADLEY
+  **********************************************/
+  /* line 18, ../scss/breakpoints/_768up.scss */
+  .wrap {
+    width: 760px;
+  }
+}
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name: Flowroute Mockup
+  Author: Bradley Stafford
+  
+  Stylesheet: Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop.
+  
+  ******************************************************************/
+  /* line 12, ../scss/breakpoints/_1030up.scss */
+  .wrap {
+    width: 1030px;
+  }
+
+  /********************************************* 
+      GENERAL (TERMINATION, ORIGINATION, PORTS) 
+  *********************************************/
+  /* line 20, ../scss/breakpoints/_1030up.scss */
+  section.page-section {
+    /* Content boxes containing information */
+  }
+  /* line 22, ../scss/breakpoints/_1030up.scss */
+  section.page-section .top-bar {
+    position: relative;
+    height: 118px;
+    padding: 0 0 0 35px;
+    margin-top: 50px;
+    text-align: left;
+  }
+  /* line 29, ../scss/breakpoints/_1030up.scss */
+  section.page-section .top-bar div {
+    display: inline-block;
+    padding: 30px 0;
+    vertical-align: middle;
+  }
+  /* line 37, ../scss/breakpoints/_1030up.scss */
+  section.page-section .top-bar .action-description .primary-heading {
+    height: 35px;
+    font-size: 1.7em;
+  }
+  /* line 45, ../scss/breakpoints/_1030up.scss */
+  section.page-section .inner-content {
+    margin: 0;
+    background: #ecf0f1;
+    padding: 55px 35px;
+    /* TABLE */
+  }
+  /* line 51, ../scss/breakpoints/_1030up.scss */
+  section.page-section .inner-content section {
+    margin-top: 0px;
+  }
+  /* line 56, ../scss/breakpoints/_1030up.scss */
+  section.page-section .inner-content .inner-box {
+    height: 283px;
+    width: 425px;
+    display: inline-block;
+  }
+  /* line 64, ../scss/breakpoints/_1030up.scss */
+  section.page-section .inner-content .flowroute-table {
+    width: 490px;
+    margin-left: 28px;
+    display: inline-block;
+  }
+
+  /*********************************************** 
+     END GENERAL (TERMINATION, ORIGINATION, PORTS) 
+  **********************************************/
+  /********************************************** 
+          TERMINATION 
+   *********************************************/
+  /* line 80, ../scss/breakpoints/_1030up.scss */
+  #termination {
+    /* HEADER */
+    /* Download A-Z */
+    /* END HEADER */
+    /* INSIDE THE BOX */
+    /* Table interaction */
+  }
+  /* line 83, ../scss/breakpoints/_1030up.scss */
+  #termination .action-description {
+    width: 213px;
+    margin-bottom: 0;
+  }
+  /* line 88, ../scss/breakpoints/_1030up.scss */
+  #termination .phone-search-bar {
+    width: 490px;
+    margin-right: 33px;
+  }
+  /* line 91, ../scss/breakpoints/_1030up.scss */
+  #termination .phone-search-bar input {
+    font-size: 20px;
+    padding-left: 75px;
+    background: white url(../images/phoneicon.png) 16px 0 no-repeat;
+    height: 40px;
+  }
+  /* line 101, ../scss/breakpoints/_1030up.scss */
+  #termination .download {
+    background: #2d3233;
+    text-align: center;
+    height: 100%;
+    width: 240px;
+  }
+  /* line 105, ../scss/breakpoints/_1030up.scss */
+  #termination .download h3 {
+    font-size: 14px;
+    margin: 5px auto;
+  }
+  /* line 110, ../scss/breakpoints/_1030up.scss */
+  #termination .download button {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: 120px;
+    height: 25px;
+    background: #01adc9;
+    color: #393f40;
+    font-size: 8pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    border: none;
+    margin: 0 auto;
+    font-size: 10px;
+    padding: 0 17px 0 0;
+    color: white;
+  }
+  /* line 68, ../scss/partials/_mixins.scss */
+  #termination .download button:active {
+    color: white;
+  }
+  /* line 124, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box {
+    /* Country/Pricing Box */
+  }
+  /* line 129, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-destination {
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+  }
+  /* line 134, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-destination h3, #termination #pricing-box .country-details .c-destination h4 {
+    margin: 0;
+  }
+  /* line 138, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-destination h4 {
+    height: 24px;
+  }
+  /* line 142, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-destination h3 {
+    font-size: 14px;
+    color: #95a5a6;
+    text-transform: uppercase;
+  }
+  /* line 146, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-destination span {
+    font-size: 10px;
+  }
+  /* line 149, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-destination img {
+    float: left;
+    margin-right: 10px;
+  }
+  /* line 154, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-code {
+    float: right;
+    display: inline-block;
+    width: 180px;
+    text-align: right;
+  }
+  /* line 160, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-code h3, #termination #pricing-box .country-details .c-code h4 {
+    margin: 0;
+  }
+  /* line 164, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .country-details .c-code h3 {
+    font-size: 14px;
+    color: #95a5a6;
+    text-transform: uppercase;
+  }
+  /* line 170, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .starting-at {
+    font-size: 14px;
+  }
+  /* line 173, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .price-per {
+    font-size: 48px;
+  }
+  /* line 176, ../scss/breakpoints/_1030up.scss */
+  #termination #pricing-box .per-measure {
+    font-size: 10px;
+  }
+  /* line 183, ../scss/breakpoints/_1030up.scss */
+  #termination .table-interaction .table-pages {
+    display: inline-block;
+  }
+  /* line 185, ../scss/breakpoints/_1030up.scss */
+  #termination .table-interaction .table-pages a {
+    color: #95a5a6;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 14px;
+    padding: 0 6px;
+  }
+  /* line 193, ../scss/breakpoints/_1030up.scss */
+  #termination .table-interaction .table-pages a:hover {
+    color: #323944;
+  }
+  /* line 197, ../scss/breakpoints/_1030up.scss */
+  #termination .table-interaction .table-pages a.active {
+    border-bottom: 3px solid #95a5a6;
+    color: #323944;
+  }
+  /* line 204, ../scss/breakpoints/_1030up.scss */
+  #termination .table-interaction button {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    width: 120px;
+    height: 28px;
+    background: #b1c2c6;
+    color: #393f40;
+    font-size: 8pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    text-align: right;
+    float: right;
+    margin: 0;
+    font-size: 8pt;
+    padding-bottom: 5px;
+    padding-left: 0;
+  }
+  /* line 50, ../scss/partials/_mixins.scss */
+  #termination .table-interaction button:active {
+    color: white;
+  }
+  /* line 212, ../scss/breakpoints/_1030up.scss */
+  #termination .table-interaction button i {
+    margin-right: 10px;
+    font-size: 16px;
+    color: white;
+    color: white;
+    float: none;
+  }
+  /* line 220, ../scss/breakpoints/_1030up.scss */
+  #termination footer {
+    padding: 0 70px 50px 70px;
+    margin: 0 auto;
+    background: #ecf0f1;
+    text-align: left;
+  }
+  /* line 226, ../scss/breakpoints/_1030up.scss */
+  #termination footer .footnote {
+    font-size: 10px;
+    color: #95a5a6;
+    font-weight: bold;
+  }
+
+  /************************************ 
+          END TERMINATION 
+  /************************************/
+  /************************************ 
+          BEGIN ORIGINATION
+  /************************************/
+  /* line 243, ../scss/breakpoints/_1030up.scss */
+  #origination {
+    /* Wrappers to help with positioning of toggles and content */
+    /* Contains the Toggle, and the content the toggle triggers. */
+    /* End Box Container */
+    /* Transfer link */
+    /* Styles specfic to this sections inner box property */
+  }
+  /* line 245, ../scss/breakpoints/_1030up.scss */
+  #origination #side-message {
+    background: #2d3233;
+    text-align: center;
+    height: 100%;
+    padding: 30px 10px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 241px;
+  }
+  /* line 255, ../scss/breakpoints/_1030up.scss */
+  #origination #side-message p {
+    margin: 18px 0 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0;
+  }
+  /* line 267, ../scss/breakpoints/_1030up.scss */
+  #origination .left-boxes, #origination .right-boxes {
+    width: 425px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  /* line 273, ../scss/breakpoints/_1030up.scss */
+  #origination .right-boxes {
+    margin-left: 96px;
+  }
+  /* line 280, ../scss/breakpoints/_1030up.scss */
+  #origination .box-container .box-heading {
+    margin-top: 0;
+    text-align: center;
+  }
+  /* line 285, ../scss/breakpoints/_1030up.scss */
+  #origination .box-container .box-toggle {
+    height: 50px;
+    background: #e0e7e8;
+    text-align: center;
+    color: #838a8b;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  /* line 296, ../scss/breakpoints/_1030up.scss */
+  #origination .box-container .box-toggle.active {
+    background: #01adc9;
+    color: white;
+  }
+  /* line 303, ../scss/breakpoints/_1030up.scss */
+  #origination .box-container .box-toggle .icon {
+    float: left;
+    font-size: 24px;
+    color: #838a8b;
+    position: relative;
+    bottom: 5px;
+    left: 15px;
+  }
+  /* line 315, ../scss/breakpoints/_1030up.scss */
+  #origination .box-container.second {
+    margin-left: 130px;
+  }
+  /* line 324, ../scss/breakpoints/_1030up.scss */
+  #origination .transfer {
+    color: #e08f23;
+  }
+  /* line 329, ../scss/breakpoints/_1030up.scss */
+  #origination .inner-box {
+    height: auto;
+    display: none;
+  }
+  /* line 334, ../scss/breakpoints/_1030up.scss */
+  #origination .inner-box .price-details {
+    padding: 0;
+  }
+  /* line 337, ../scss/breakpoints/_1030up.scss */
+  #origination .inner-box .price-details .price-per .per-ymd {
+    display: block;
+    font-size: 14px;
+    margin-top: -15px;
+  }
+  /* line 343, ../scss/breakpoints/_1030up.scss */
+  #origination .inner-box .price-details .per-measure {
+    margin-top: 25px;
+    font-size: 10px;
+  }
+
+  /************************************  
+          END ORIGINATION
+  *************************************/
+  /************************************ 
+          BEGIN PORTS
+  /************************************/
+  /* line 357, ../scss/breakpoints/_1030up.scss */
+  #ports #phone-number {
+    display: inline-block;
+    width: 425px;
+  }
+  /* line 361, ../scss/breakpoints/_1030up.scss */
+  #ports #phone-number .phone-input {
+    width: 100%;
+    padding: 3px;
+    margin-top: 5px;
+  }
+  /* line 367, ../scss/breakpoints/_1030up.scss */
+  #ports #phone-number input[type="submit"] {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: 100px;
+    height: 30px;
+    background: #01adc9;
+    color: #393f40;
+    font-size: 8pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    border: none;
+    box-shadow: 0 4px 4px -2px #016b7d;
+    -moz-box-shadow: 0 4px 4px -2px #016b7d;
+    -webkit-box-shadow: 0 4px 4px -2px #016b7d;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+  }
+  /* line 68, ../scss/partials/_mixins.scss */
+  #ports #phone-number input[type="submit"]:active {
+    color: white;
+  }
+  /* line 375, ../scss/breakpoints/_1030up.scss */
+  #ports #phone-number a {
+    font-size: 12px;
+    margin-left: 5px;
+    display: inline-block;
+  }
+
+  /***********************************
+          END PORTS
+  ***************************************/
+}
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+  /****************************************************************
+  Site Name: Flowroute Mockup
+  Author: Bradley Stafford
+  
+  Stylesheet: Super Large Monitor Stylesheet
+  
+  You can add some advanced styles here if you like. This kicks in
+  on larger screens.
+  
+  ******************************************************************/
+  /* line 12, ../scss/breakpoints/_1240up.scss */
+  .wrap {
+    width: 1130px;
+  }
+
+  /* line 16, ../scss/breakpoints/_1240up.scss */
+  a {
+    color: #01adc9;
+  }
+
+  /********************************************* 
+      GENERAL (TERMINATION, ORIGINATION, PORTS) 
+  *********************************************/
+  /* line 22, ../scss/breakpoints/_1240up.scss */
+  section.page-section {
+    /* Content boxes containing information */
+  }
+  /* line 24, ../scss/breakpoints/_1240up.scss */
+  section.page-section .top-bar {
+    padding: 0 0 0 70px;
+    margin-top: 50px;
+  }
+  /* line 30, ../scss/breakpoints/_1240up.scss */
+  section.page-section .inner-content {
+    background: #ecf0f1;
+    padding: 55px 70px;
+    /* TABLE */
+  }
+  /* line 36, ../scss/breakpoints/_1240up.scss */
+  section.page-section .inner-content .flowroute-table {
+    margin-left: 60px;
+  }
+
+  /*********************************************** 
+     END GENERAL (TERMINATION, ORIGINATION, PORTS) 
+  **********************************************/
+  /********************************************** 
+          TERMINATION 
+   *********************************************/
+  /* line 49, ../scss/breakpoints/_1240up.scss */
+  #termination .download {
+    width: 275px;
+    padding-right: 25px;
+  }
+  /* line 54, ../scss/breakpoints/_1240up.scss */
+  #termination .phone-search-bar {
+    width: 520px;
+  }
+
+  /********************************************* 
+      END TERMINATION 
+  *********************************************/
+  /********************************************* 
+      BEGIN ORIGINATION
+  *********************************************/
+  /* line 67, ../scss/breakpoints/_1240up.scss */
+  #origination #side-message {
+    width: 276px;
+    padding: 30px 35px 0 4px;
+  }
+  /* line 72, ../scss/breakpoints/_1240up.scss */
+  #origination .right-boxes {
+    margin-left: 125px;
+  }
+
+  /********************************************* 
+      END ORIGINATION
+  *********************************************/
+  /******************************************** 
+      BEGIN PORTS
+  *********************************************/
+  /**************************************** 
+      END PORTS
+  *****************************************/
+}
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+  Site Name: 
+  Author: 
+  
+  Stylesheet: Retina Screens & Devices Stylesheet
+  
+  When handling retina screens you need to make adjustments, especially
+  if you're not using font icons. Here you can add them in one neat
+  place.
+  
+  ******************************************************************/
+  /* 
+  
+  EXAMPLE 
+  Let's say you have an image and you need to make sure it looks ok
+  on retina screens. Let's say we have an icon which dimension are
+  24px x 24px. In your regular stylesheets, it would look something
+  like this:
+  
+  .icon {
+  	width: 24px;
+  	height: 24px;
+  	background: url(img/test.png) no-repeat;
+  }
+  
+  For retina screens, we have to make some adjustments, so that image
+  doesn't look blurry. So, taking into account the image above and the
+  dimensions, this is what we would put in our retina stylesheet:
+  
+  .icon {
+  	background: url(img/test@2x.png) no-repeat;
+  	background-size: 24px 24px;
+  }
+  
+  So, you would create the same icon, but at double the resolution, meaning 
+  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+  (this is pretty standard practice). Set the background image so it matches
+  the original dimensions and you are good to go. 
+  
+  */
+}
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+
+Not Included in this Mockup
+*********************/
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  /* line 13, ../scss/partials/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 21, ../scss/partials/_print.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  /* line 26, ../scss/partials/_print.scss */
+  a:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  /* line 31, ../scss/partials/_print.scss */
+  a abbr[title]:after, a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 38, ../scss/partials/_print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 42, ../scss/partials/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 47, ../scss/partials/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 51, ../scss/partials/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 55, ../scss/partials/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 63, ../scss/partials/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 69, ../scss/partials/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 78, ../scss/partials/_print.scss */
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}

@@ -1,0 +1,98 @@
+/* Mixins */
+
+/*********************
+TRANSITION
+*********************/
+
+@mixin transition($transition...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit-", "-moz-", "-ms-", "-o-" );
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+@mixin border-radius($radius){
+    $prefixes:      ("-webkit-", "-moz-");
+    @each $prefix in $prefixes{
+        #{$prefix}border-radius: $radius;
+    }
+    border-radius: $radius;
+
+}
+
+
+/*********************
+    BOX SHADOW
+*********************/
+@mixin box-shadow{
+    box-shadow: 0 4px 4px -2px #016b7d;
+    -moz-box-shadow: 0 4px 4px -2px #016b7d;
+    -webkit-box-shadow: 0 4px 4px -2px #016b7d;
+}
+
+
+/* @extend doesn't work with nested selectors, so this is now a mixin */
+@mixin fr-table-btn($width, $height){
+    
+    @include border-radius(2px);
+
+    width: $width;
+    height: $height;
+    background: $button; 
+    color: $button-text; 
+    font-size: 8pt;
+    font-weight: bold; 
+    text-transform:uppercase;
+    border: none; 
+    text-align: right; 
+    
+    &:active{
+        color: $white;
+    }
+}
+
+@mixin fr-btn($width, $height){
+    @include border-radius(4px);
+
+    width: $width;
+    height: $height;
+    background: $download-blue; 
+    color: $button-text; 
+    font-size: 8pt;
+    font-weight: bold; 
+    text-transform:uppercase;
+    text-align: right; 
+    border: none; 
+    
+    &:active{
+        color: $white;
+    }
+}
+
+@mixin button-icon{
+    margin-right: 10px;
+    font-size: 16px;
+    color: $white; 
+}
+
+@mixin detail-text{
+    font-size: 14px;
+    color: $light-gray;
+    text-transform: uppercase; 
+
+}
+
+@mixin header-right-base{
+    width: auto;
+    text-align: center; 
+    background: $header-dark; 
+}
+
+@mixin header-right-side{
+    background: $header-dark;  
+    text-align: center;
+    height: 100%;
+}
+
+

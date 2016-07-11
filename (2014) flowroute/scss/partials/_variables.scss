@@ -1,0 +1,36 @@
+/******************************************************************
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$black:                 #323944;
+$white:                 #fff;
+
+$header-background:     #454c4d;
+$header-dark:           #2d3233;
+$content-background:    #ecf0f1;
+
+$body-text:             #393f40;
+$light-gray:            #95a5a6;
+$separator-gray:        #ced9db;
+$button:                #b1c2c6;
+$button-text:           #393f40;
+
+$download-blue:         #01adc9;
+$external-link:         #e08f23;
+
+$box-blue:              #01adc9; 
+$box-gray:              #e0e7e8; 
+$disabled:        #838a8b;

@@ -1,0 +1,89 @@
+/****************************************************************
+Site Name: Flowroute Mockup
+Author: Bradley Stafford
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+
+.wrap{
+    width: 1130px;
+}
+
+a{
+    color: $box-blue;
+}
+/********************************************* 
+    GENERAL (TERMINATION, ORIGINATION, PORTS) 
+*********************************************/
+section.page-section{
+
+    .top-bar{
+        padding: 0 0 0 70px;
+        margin-top: 50px;      
+    }
+
+    /* Content boxes containing information */ 
+    .inner-content{
+
+        background: $content-background; 
+        padding: 55px 70px;
+
+           /* TABLE */
+        .flowroute-table{
+            margin-left: 60px; 
+        }
+    } 
+}
+ /*********************************************** 
+    END GENERAL (TERMINATION, ORIGINATION, PORTS) 
+ **********************************************/ 
+
+/********************************************** 
+        TERMINATION 
+ *********************************************/
+#termination{  
+    .download{
+        width: 275px;
+        padding-right: 25px;
+    }
+
+    .phone-search-bar{
+        width: 520px;   
+    }
+}
+/********************************************* 
+    END TERMINATION 
+*********************************************/
+
+/********************************************* 
+    BEGIN ORIGINATION
+*********************************************/
+
+#origination{
+    #side-message{
+        width: 276px;
+        padding: 30px 35px 0 4px;
+    }
+
+    .right-boxes{
+       margin-left: 125px;
+    }
+}
+/********************************************* 
+    END ORIGINATION
+*********************************************/
+
+/******************************************** 
+    BEGIN PORTS
+*********************************************/
+#ports{
+
+
+}
+/**************************************** 
+    END PORTS
+*****************************************/
